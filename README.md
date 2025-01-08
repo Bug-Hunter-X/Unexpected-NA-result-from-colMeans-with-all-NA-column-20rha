@@ -1,0 +1,3 @@
+This repository demonstrates a subtle bug in R related to the `colMeans` function and the handling of `NA` values.  The issue occurs when an entire column consists of `NA` values and `na.rm = TRUE` is used.  Instead of returning a warning or an error, `colMeans` unexpectedly returns `NA`.
+
+The `bug.R` file shows the problematic code, while `bugSolution.R` illustrates a corrected approach to handle such situations effectively.  The solution involves a check for all NA values before applying `colMeans`. 
